@@ -196,7 +196,8 @@ Bloch_CV_Model::Bloch_CV_Model     () : m_tpoint(0) {
 
     //cvode2.5:
     // create cvode memory pointer; no mallocs done yet.
-    m_cvode_mem = CVodeCreate (CV_ADAMS, CV_FUNCTIONAL);
+//    m_cvode_mem = CVodeCreate (CV_ADAMS, CV_FUNCTIONAL);
+    m_cvode_mem = CVodeCreate(CV_ADAMS);
 
     // cvode allocate memory.
     // do CVodeMalloc with dummy values y0,abstol once here;
